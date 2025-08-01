@@ -226,26 +226,6 @@ flake8 app/ tests/
 black app/ tests/
 ```
 
-### Project Structure
-```
-backend/
-├── app/
-│   ├── __init__.py
-│   ├── models.py           # Order data model
-│   ├── in_memory_storage.py # Storage operations
-│   ├── order_tracker.py    # Business logic
-│   └── app.py             # Flask application
-├── tests/
-│   ├── conftest.py        # Test configuration
-│   ├── test_order_tracker.py # Unit tests
-│   └── test_api.py        # Integration tests
-├── Dockerfile             # Container definition
-├── docker-compose.yml     # Multi-service setup
-├── requirements.txt       # Python dependencies
-├── pytest.ini           # Test configuration
-└── .flake8              # Linting configuration
-```
-
 ## 🚢 Deployment
 
 ### Docker Production
