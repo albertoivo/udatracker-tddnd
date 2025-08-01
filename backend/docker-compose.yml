@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  order-tracker-api:
+    build: .
+    container_name: udatracker-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount source code for development (hot reload)
+      - .:/app
+    environment:
+      - FLASK_APP=app/app.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - PYTHONPATH=/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  default:
+    name: udatracker-network

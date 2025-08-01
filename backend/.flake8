@@ -1,0 +1,41 @@
+[flake8]
+# Ignore specific directories
+exclude = 
+    venv,
+    env,
+    .venv,
+    .env,
+    __pycache__,
+    .git,
+    .pytest_cache,
+    .mypy_cache,
+    .tox,
+    build,
+    dist,
+    *.egg-info,
+    node_modules,
+    .coverage
+
+# Maximum line length
+max-line-length = 88
+
+# Ignore specific error codes
+# E203: whitespace before ':'
+# W503: line break before binary operator  
+# E501: line too long (handled by max-line-length)
+ignore = E203,W503,E501
+
+# Maximum complexity (optional)
+max-complexity = 10
+
+# Enable additional checks
+select = E,W,F,C
+
+# Show source code for each error
+show-source = True
+
+# Show pep8 violation statistics
+statistics = True
+
+# Count errors
+count = True
