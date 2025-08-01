@@ -61,7 +61,7 @@ The project follows a layered architecture pattern:
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:albertoivo/udatracker-tddnd.git
    cd udatracker/backend
    ```
 
@@ -82,7 +82,7 @@ The project follows a layered architecture pattern:
 
 1. **Clone and navigate:**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:albertoivo/udatracker-tddnd.git
    cd udatracker/backend
    ```
 
